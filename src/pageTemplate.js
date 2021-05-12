@@ -11,7 +11,7 @@ function generateHeader() {
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="navbar navbar-light bg-light">
+    <nav class="navbar>
         <div class="container-fluid">
         <span class="navbar-brand mb-0 h1">Team Members</span>
         </div>

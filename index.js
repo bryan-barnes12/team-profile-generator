@@ -2,6 +2,7 @@ const page = require('./src/pageTemplate');
 const inquirer = require('inquirer');
 const header = page.generateHeader();
 const footer = page.generateFooter();
+const style = require('./src/styleTemplate')
 
 const fs = require('fs');
 
@@ -123,7 +124,11 @@ function compileHtml(arr) {
     arr = arr.join('');
     fs.writeFile('./dist/team.html', arr, function (err) {
         if (err) throw err;
-        console.log('File output successful.')
+        console.log('HTML output successful.')
+    });
+    fs.writeFile('./dist/style.css', style, function (err) {
+        if (err) throw err;
+        console.log('Style output successful.')
     });
 };
 
