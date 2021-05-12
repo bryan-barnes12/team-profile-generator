@@ -21,16 +21,16 @@ function generateHeader() {
 
 
 
-function generateManager(empName, empId, empEmail, empOffice) {
+function generateManager(obj) {
     const cardContent = `
 <div class="card" style="width: 18rem;">
     <div class="card-body">
-        <h5 class="card-title">${empName}</h5>
-        <h6 class="card-subtitle mb-2 text-muted">Manager</h6>
+        <h5 class="card-title">${obj.empName}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">${obj.empRole}</h6>
         <ul>
-            <li><label>ID:</label>${empId}</li>
-            <li><lable>Email:</label><a href="mailto:${empEmail}">${empEmail}</a></li>
-            <li><lable>Office Number:</label>${empOffice}</li>
+            <li>ID: ${obj.empId}</li>
+            <li>Email: <a href="mailto:${obj.empEmail}">${obj.empEmail}</a></li>
+            <li>Office Number: ${obj.empOffice}</li>
         </ul>
     </div>
 </div>
@@ -38,32 +38,32 @@ function generateManager(empName, empId, empEmail, empOffice) {
     return cardContent;
 }
 
-function generateEngineer(empName, empId, empEmail, empGitName) {
+function generateEngineer(obj) {
     const cardContent = `
 <div class="card" style="width: 18rem;">
     <div class="card-body">
-        <h5 class="card-title">${empName}</h5>
+        <h5 class="card-title">${obj.empName}</h5>
         <h6 class="card-subtitle mb-2 text-muted">Engineer</h6>
         <ul>
-            <li><label>ID:</label>${empId}</li>
-            <li><lable>Email:</label><a href="mailto:${empEmail}">${empEmail}</a></li>
-            <li><lable>GitHub:</label><a href="https://github.com/${empGitName}" target="_blank">${empGitName}</a></li>
+            <li>ID: ${obj.empId}</li>
+            <li>Email: <a href="mailto:${obj.empEmail}">${obj.empEmail}</a></li>
+            <li>GitHub: <a href="https://github.com/${obj.empGitName}" target="_blank">${obj.empGitName}</a></li>
         </ul>
     </div>
 </div>
 `
     return cardContent;
 }
-function generateIntern(empName, empId, empEmail, empSchool) {
+function generateIntern(obj) {
     const cardContent = `
 <div class="card" style="width: 18rem;">
     <div class="card-body">
-        <h5 class="card-title">${empName}</h5>
-        <h6 class="card-subtitle mb-2 text-muted">Intern</h6>
+        <h5 class="card-title">${obj.empName}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">${obj.empRole}</h6>
         <ul>
-            <li><label>ID:</label>${empId}</li>
-            <li><lable>Email:</label><a href="mailto:${empEmail}">${empEmail}</a></li>
-            <li><lable>School:</label>${empSchool}</li>
+            <li>ID: ${obj.empId}</li>
+            <li>Email: <a href="mailto:${obj.empEmail}">${obj.empEmail}</a></li>
+            <li>School: ${obj.empSchool}</li>
         </ul>
     </div>
 </div>
